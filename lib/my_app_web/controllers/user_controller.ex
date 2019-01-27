@@ -48,6 +48,7 @@ defmodule MyAppWeb.UserController do
         |> put_session(:current_user_id, user.id)
         |> put_status(:ok)
         |> render(MyAppWeb.UserView, "sign_in.json", user: user)
+
       {:error, message} ->
         conn
         |> delete_session(:current_user_id)
