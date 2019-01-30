@@ -11,7 +11,7 @@ config :logger, level: :warn
 
 # Configure your database
 config :my_app, MyApp.Repo,
-  username: "",
+  username: "postgres",
   password: "",
   database: "my_app_test",
   hostname: "localhost",
