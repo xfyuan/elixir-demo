@@ -3,6 +3,8 @@ elixir:
   - 1.8
 otp_release:
   - 21.0
+services:
+  - postgresql
 matrix:
   exclude:
     - elixir: 1.5
@@ -20,6 +22,7 @@ matrix:
 sudo: false
 env:
   global:
+    - PGPORT=5433
     - ELIXIR_ASSERT_TIMEOUT=2000
   matrix:
     - COWBOY_VERSION=2.0
@@ -35,3 +38,10 @@ after_script:
 cache:
   directories:
   - assets/node_modules
+
+addons:
+  postgresql: "10"
+  apt:
+    packages:
+    - postgresql-10
+    - postgresql-client-10
