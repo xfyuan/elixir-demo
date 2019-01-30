@@ -1,5 +1,7 @@
 # MyApp
 
+[![Build Status](https://travis-ci.org/xfyuan/elixir-demo.svg?branch=master)](https://travis-ci.org/xfyuan/elixir-demo)
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
